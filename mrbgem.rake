@@ -1,4 +1,4 @@
 MRuby::Gem::Specification.new('mruby-hmac') do |spec|
   spec.license = 'BSD'
-  spec.authors = 'Daniel Bovensiepen'
+  spec.authors = ['Olivier Gay', 'Daniel Bovensiepen']
 end
