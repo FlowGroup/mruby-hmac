@@ -38,6 +38,9 @@ hmac_hexdigest(mrb_state *mrb, mrb_value self, unsigned int sha_len, unsigned in
   mrb_get_args(mrb, "ss", &key, &key_len, &msg, &msg_len);
 
   switch (sha_len) {
+    case 256:
+      hmac_sha256(key, key_len, msg, msg_len, mac, mac_len);
+      break;
     case 512:
       hmac_sha512(key, key_len, msg, msg_len, mac, mac_len);
       break;

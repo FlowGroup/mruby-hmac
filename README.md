@@ -1,12 +1,22 @@
 mruby-hmac
 ==========
 
-mruby GEM for HMAC-SHA-224/256/384/512 without any external dependencies
+mruby GEM for HMAC-SHA-256/512 without any external dependencies
 
 ## Features
 
-- Message Digest HMAC-SHA-224/256/384/512
+- Message Digest HMAC-SHA-256/512
 - no external dependencies
+
+## Usage
+
+```ruby
+HMAC.sha256("Jefe", "what do ya want for nothing?")
+# => "5bdcc146bf60754e6a042426089575c75a003f089d2739839dec58b964ec3843"
+
+HMAC.sha512("Jefe", "what do ya want for nothing?")
+# => "164b7a7bfcf819e2e395fbe73b56e0a387bd64222e831fd610270cd7ea2505549758bf75c05a994a6d034f65f8f0e6fdcaeab1a34d4a6b4b636e070a38bce737"
+```
 
 ## License
 
@@ -44,5 +54,5 @@ The mruby GEM boilerplate code is licensed in the same way.
 ## Alternatives
 
 This mruby GEM was created to provide HMAC Alghorithm without external dependencies. 
-A more featureful alternative with a dependency to libcrypto see:
+For a more featureful alternative with a dependency to libcrypto see:
   - mruby-digest (https://github.com/iij/mruby-digest)
